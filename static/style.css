@@ -1,0 +1,119 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border-top: none;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animation classes */
+.animate-slide-in {
+    animation: slideIn 0.5s ease forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.3s ease forwards;
+}
+
+/* Form animations */
+.form-control, .form-select {
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 0.25rem 0.5rem rgba(52, 152, 219, 0.1);
+}
+
+/* Table row animations */
+.expense-row {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.expense-row:nth-child(1) { animation-delay: 0.1s; }
+.expense-row:nth-child(2) { animation-delay: 0.2s; }
+.expense-row:nth-child(3) { animation-delay: 0.3s; }
+.expense-row:nth-child(4) { animation-delay: 0.4s; }
+.expense-row:nth-child(5) { animation-delay: 0.5s; }
+
+/* Success message animation */
+.success-message {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    animation: slideIn 0.5s ease forwards;
+    display: none;
+}
